@@ -1,0 +1,170 @@
+/* ====================== */
+/* 🌿 Auth Forms Styles   */
+/* ====================== */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6fdf6;
+  }
+  
+  .auth-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .auth-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2e7d32;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+  }
+  
+  .auth-form button {
+    padding: 12px;
+    width: 100%;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .auth-form button:hover {
+    background-color: #388e3c;
+  }
+  
+  .auth-form p {
+    margin-top: 15px;
+  }
+  
+  .auth-form p span {
+    color: #66bb6a;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Transition for form toggle */
+  .auth-container .auth-form {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2e7d32;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    color: white;
+    font-weight: bold;
+    animation: fadeInDown 0.8s ease-in-out;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 100%;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #dcedc8;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background-color: #388e3c;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      padding: 20px;
+      display: none;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenNest Nursery</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">🌿 GreenNest</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html" class="active">Cart(<span id="cartCounter">0</span>)</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="login.html">Log-In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Shop Section -->
+  <section class="shop">
+    <h1>Our Plants</h1>
+
+    <!-- Category Filter -->
+    <label for="categoryFilter">Filter by category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="indoor">Indoor Plants</option>
+      <option value="herbs">Herbs</option>
+      <option value="succulent">Succulents</option>
+      <option value="outdoor">Outdoor Plants</option>
+    </select>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="product-grid">
+      <!-- Product cards will be injected here by JavaScript -->
+    </div>
+  </section>
+
+  <script src="shop.js"></script>
+</body>
+</html>
